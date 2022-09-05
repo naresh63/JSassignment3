@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JS assign 3</h1>
+    <script>
+      //1.Using for loops, write a Javascript program to output the following pattern .
+      let n = 4; // height of pattern
+      let str = "";
+      let count = 1;
+      // External loop
+      for (let i = 1; i <= n; i++) {
+        // Internal loop
+        for (let j = 1; j <= i; j++) {
+          str += count;
+          count++;
+        }
+        str += "\n";
+      }
+      console.log(str);
+      //2.Write a program to find whether a given number is armstrong number or not.
+      let num = 153;
+      let checkDig = num.toString();
+      let sumOfDigit = 0;
+      for (let x of checkDig) {
+        console.log(x);
+        sumOfDigit = sumOfDigit + x * x * x;
+      }
+      console.log(sumOfDigit);
+      if (num === sumOfDigit) {
+        console.log("given number is armstrong number");
+      } else {
+        console.log("given number is  not armstrong number");
+      }
+      //3.
+      let num3 = 145;
+      let checkDig3 = num3.toString();
+      let sumOfDigit3 = 0;
+
+      for (let x of checkDig3) {
+        let facto = 1;
+        for (let i = 1; i <= x; i++) {
+          facto = facto * i;
+        }
+        console.log(facto, "facto value");
+        sumOfDigit3 = sumOfDigit3 + facto;
+      }
+      console.log(sumOfDigit3, "sum of digit facto");
+
+      if (num3 === sumOfDigit3) {
+        console.log("given number is special number");
+      } else {
+        console.log("given number is  not special number");
+      }
+    </script>
+  </body>
+</html>
